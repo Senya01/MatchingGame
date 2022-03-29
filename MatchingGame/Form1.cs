@@ -70,8 +70,6 @@ namespace MatchingGame
                 if (clickedLabel.ForeColor == Color.Black)
                     return;
 
-                CheckForWinner();
-
                 if (firstClicked == null)
                 {
                     firstClicked = clickedLabel;
@@ -81,6 +79,8 @@ namespace MatchingGame
 
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Black;
+
+                CheckForWinner();
 
                 if (firstClicked.Text == secondClicked.Text)
                 {
